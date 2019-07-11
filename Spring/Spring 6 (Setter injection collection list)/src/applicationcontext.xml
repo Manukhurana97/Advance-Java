@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Q" class="pack.Question">
+        <property name="id" value="1"></property>
+        <property name="ques" value="What is java"></property>
+       <property name="answers">
+           <list>
+               <ref bean="ans1"/>
+               <ref bean="ans2"/>
+           </list>
+       </property>
+    </bean>
+
+    <bean id="ans1" class="pack.Answer">
+        <property name="id" value="1"></property>
+        <property name="ans" value="Java is a high level programming language"></property>
+    </bean>
+
+    <bean id="ans2" class="pack.Answer">
+        <property name="id" value="2"></property>
+        <property name="ans" value="Its is best programming language and its (wora) "></property>
+    </bean>
+
+</beans>

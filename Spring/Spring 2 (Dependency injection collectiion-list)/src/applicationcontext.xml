@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="q" class="pack1.Question">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="Manu"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="ans1"></ref>
+                <ref bean="ans2"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="ans1" class="pack1.Answer">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="manu"></constructor-arg>
+        <constructor-arg value="abc"></constructor-arg>
+    </bean>
+    <bean id="ans2" class="pack1.Answer">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="Manu"></constructor-arg>
+        <constructor-arg value="bcd"></constructor-arg>
+    </bean>
+
+
+</beans>

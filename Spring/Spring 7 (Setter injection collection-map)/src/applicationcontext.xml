@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Q" class="pack7.Question">
+        <property name="id" value="1"></property>
+        <property name="name" value="manu"></property>
+        <property name="ques" value="What is Spring?"></property>
+        <property name="ans">
+            <map>
+                <entry key-ref="usr1" value-ref="ans1"></entry>
+                <entry key-ref="usr2" value-ref="ans2"></entry>
+            </map>
+        </property>
+    </bean>
+
+
+<!--    Key-->
+    <bean id="usr1" class="pack7.user">
+        <property name="id" value="1"></property>
+        <property name="name" value="A"></property>
+    </bean>
+
+    <bean id="usr2" class="pack7.user">
+        <property name="id" value="2"></property>
+        <property name="name" value="B"></property>
+    </bean>
+
+
+<!--    value-->
+    <bean id="ans1" class="pack7.Answer">
+        <property name="id" value="1"></property>
+        <property name="ans" value="Spring is a lightweight framework. It can be thought of as a framework of frameworks because it provides support to various frameworks such as Struts, Hibernate, Tapestry, EJB, JSF etc. The framework, in broader sense, can be defined as a structure where we find solution of the various technical problems."></property>
+        <property name="datetime" value="07/11/2019"></property>
+    </bean>
+
+    <bean id="ans2" class="pack7.Answer">
+        <property name="id" value="2"></property>
+        <property name="ans" value="In Spring framework, IOC container is responsible to inject the dependency. We provide metadata to the IOC container either by XML file or annotation."></property>
+        <property name="datetime" value="06/11/2019"></property>
+    </bean>
+
+</beans>

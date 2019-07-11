@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="E" class="pack5.Employee">
+            <property name="id"><value>1</value></property>
+            <property name="name"><value>Manu</value></property>
+            <property name="add" ref="address1"></property>
+
+        </bean>
+
+        <bean id="address1" class="pack5.Address">
+            <property name="city"><value>Faridabad</value></property>
+            <property name="state" value="Haryana"></property>
+            <property name="country" value="India"></property>
+        </bean>
+
+</beans>
