@@ -1,0 +1,13 @@
+<web-app>
+
+ <servlet> 
+<servlet-name>manu</servlet-name><!--manu is the name it an be anything-->
+<servlet-class>DemoServ</servlet-class><!-- name of the java field-->
+</servlet>
+
+<servlet-mapping>
+<servlet-name>manu</servlet-name><!--manu is the name it an be anything-->
+<url-pattern>/hello</url-pattern><!--for action in html-->
+</servlet-mapping>
+
+</web-app>

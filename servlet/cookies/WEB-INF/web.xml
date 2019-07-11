@@ -1,0 +1,24 @@
+<web-app>
+	<servlet>
+		<servlet-name>setc</servlet-name>
+		<servlet-class>SetCookie</servlet-class>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>setc</servlet-name>
+		<url-pattern>/sc</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>showc</servlet-name>
+		<servlet-class>ShowCookie</servlet-class>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showc</servlet-name>
+		<url-pattern>/showc</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+</web-app>

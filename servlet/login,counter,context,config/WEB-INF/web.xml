@@ -1,0 +1,95 @@
+<web-app>
+		<session-config>
+			<session-timeout>1</session-timeout>
+		</session-config>
+		<context-param>
+			<param-name>address</param-name>
+			<param-value>CodeLipi SCF=140,Second Floor sector-17 faridabad,Haryana</param-value>
+		</context-param>
+		<context-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</context-param>
+		<context-param>
+			<param-name>connect</param-name>
+			<param-value>jdbc:mysql:///kuchhbhi</param-value>
+		</context-param>
+		<context-param>
+			<param-name>username</param-name>
+			<param-value>root</param-value>
+		</context-param>
+		<context-param>
+			<param-name>pwd</param-name>
+			<param-value>root123</param-value>
+		</context-param>
+	
+	
+	
+	
+	
+	
+	
+	
+	<display-name>my servlet</display-name>
+	<servlet>
+		<servlet-name>ms</servlet-name>
+		<servlet-class>pack.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ms</servlet-name>
+		<url-pattern>/xyz</url-pattern>
+	</servlet-mapping>
+
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>inb</servlet-name>
+		<servlet-class>pack.Inbox</servlet-class>
+	
+		<init-param>
+			<param-name>phone</param-name>
+			<param-value>7425001</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>inb</servlet-name>
+		<url-pattern>/in</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+
+	
+	
+	<servlet>
+		<servlet-name>nu</servlet-name>
+		<servlet-class>pack.NewUser</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>nu</servlet-name>
+		<url-pattern>/nuser</url-pattern>
+	</servlet-mapping>
+	
+
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>co</servlet-name>
+		<servlet-class>pack.Counter</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>co</servlet-name>
+		<url-pattern>/count</url-pattern>
+	</servlet-mapping>
+</web-app>

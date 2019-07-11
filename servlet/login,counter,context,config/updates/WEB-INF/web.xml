@@ -1,0 +1,54 @@
+<web-app>
+		<session-config>
+			<session-timeout>1</session-timeout>
+		</session-config>
+		
+		<context-param>
+			<param-name>driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</context-param>
+		<context-param>
+			<param-name>connect</param-name>
+			<param-value>jdbc:mysql:///manu</param-value>
+		</context-param>
+		<context-param>
+			<param-name>username</param-name>
+			<param-value>root</param-value>
+		</context-param>
+		<context-param>
+			<param-name>pwd</param-name>
+			<param-value>root</param-value>
+		</context-param>
+	
+	
+	<display-name>my servlet</display-name>
+	<servlet>
+		<servlet-name>ms</servlet-name>
+		<servlet-class>pack.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ms</servlet-name>
+		<url-pattern>/xyz</url-pattern>
+	</servlet-mapping>
+
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>inb</servlet-name>
+		<servlet-class>pack.Inbox</servlet-class>
+	
+		
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>inb</servlet-name>
+		<url-pattern>/in</url-pattern>
+	</servlet-mapping>
+
+	
+	
+</web-app>
