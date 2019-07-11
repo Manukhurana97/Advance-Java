@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+  <display-name>Welcome to PDFReader</display-name>
+  <description>
+     Welcome in PDFReader
+  </description>
+
+<!-- JSPC servlet mappings start -->
+	<servlet>
+        <servlet-name>pdfreader</servlet-name>
+        <servlet-class>pdfreader</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>pdfreader</servlet-name>
+        <url-pattern>/pdfreader</url-pattern>
+    </servlet-mapping>
+    
+	
+	<servlet>
+        <servlet-name>Servlet06</servlet-name>
+        <servlet-class>Servlet06</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet06</servlet-name>
+        <url-pattern>/Servlet06</url-pattern>
+    </servlet-mapping>
+	
+<!-- JSPC servlet mappings end -->
+
+</web-app>
