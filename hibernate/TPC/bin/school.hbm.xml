@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pack.SchoolManagement" table="schoolmanagement" >
+		<id name="sid" column="sid">
+			<generator class="assigned"/>
+		</id>
+		<property name="sname" column="sname"/>
+		<property name="saddress" column="saddress"/>
+		<property name="age" column="age"/>
+		<property name="sphone" column="sphone"/>
+		<union-subclass name="pack.Teacher" >
+		<property name="tsalary" column="tsalary"/>
+		<property name="tsubject" column="tsubject"/>
+		</union-subclass>
+		<union-subclass name="pack.Student" >
+		<property name="stclass" column="stclass"/>
+		<property name="stsection" column="stsection"/>
+		</union-subclass>
+	</class>
+</hibernate-mapping>

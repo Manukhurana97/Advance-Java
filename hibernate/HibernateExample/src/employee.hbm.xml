@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pack.Employee" table="employee">
+	
+		<id name="empid" type="long" column="empid">
+			<generator class="assigned" />
+		</id>
+		<property name="ename" column="ename"/>
+		<property name="eaddress" column="eaddress"/>
+		<property name="phone" type="long" column="phone"/>
+	
+	
+	</class>
+</hibernate-mapping>

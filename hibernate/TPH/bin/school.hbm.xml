@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pack.SchoolManagement" table="schoolmanagement" discriminator-value="schoolmanagement">
+		<id name="sid" column="sid">
+			<generator class="native"/>
+		</id>
+		<discriminator column="type"/>
+		<property name="sname" column="sname"/>
+		<property name="saddress" column="saddress"/>
+		<property name="age" column="age"/>
+		<property name="sphone" column="sphone"/>
+		<subclass name="pack.Teacher" discriminator-value="Teacher">
+		<property name="tsalary" column="tsalary"/>
+		<property name="tsubject" column="tsubject"/>
+		</subclass>
+		<subclass name="pack.Student" discriminator-value="Student">
+		<property name="stclass" column="stclass"/>
+		<property name="stsection" column="stsection"/>
+		</subclass>
+	</class>
+</hibernate-mapping>
