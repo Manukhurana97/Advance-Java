@@ -1,0 +1,71 @@
+<html>
+<script language="javascript">
+
+	function getXMLObject() //XML OBJECT
+	{
+			var xmlHttp = false;
+		try 
+		{
+			xmlHttp = new ActiveXObject("Msxml2.XMLHTTP") // For Old Microsoft Browsers
+		}
+		catch (e)
+		{
+			try
+			{
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP") // For Microsoft IE 6.0+
+			}
+			catch (e2) {
+				xmlHttp = false // No Browser accepts the XMLHTTP Object then false
+			}
+		}
+		if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+		xmlHttp = new XMLHttpRequest(); //For Mozilla, Opera Browsers
+	}
+	return xmlHttp; // Mandatory Statement returning the ajax object created
+	}
+
+	var xmlhttp = new getXMLObject();	//xmlhttp holds the ajax object
+
+	 function ajaxFunction(a)
+	{
+	//var getdate = new Date(); //Used to prevent caching during ajax call
+			if(document.f1.email.value.length >5)
+			{
+				if(xmlhttp) { 
+					xmlhttp.open("GET","executecommands.jsp?query=" + a); //gettime will be the servlet name
+					xmlhttp.onreadystatechange = handleServerResponse;
+					
+					xmlhttp.send();
+				}
+			}
+			else
+			{
+				document.getElementById("disp").innerHTML="no records found";
+			}
+	}
+
+	function handleServerResponse() {
+			if (xmlhttp.readyState == 4) {
+					if(xmlhttp.status == 200) {
+//document.getElementById("disp").innerHTML=xmlhttp.responseText; //Update the HTML Form element 
+		document.getElementById("disp").innerHTML=xmlhttp.responseText;
+}
+else {
+alert("Error during AJAX call. Please try again");
+}
+}
+}
+</script>
+<center>
+
+<h1>Create Your Account</h1>
+	<form name="f1" method="post" action="nuser">
+		Email<input type="text" name="email" onblur="ajaxFunction(this.value)"><span id="disp" name="disp"></span><br>
+		Password<input type="password" name="pass"><br>
+		Address<input type="text" name="address"><br>
+		Phone<input type="text" name="phone"><br>
+		<input type="submit" value="create account">
+	</form>
+	<a href="index.jsp" style="text-decoration:none">home</a>
+	</center>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<table border="0" width="948" height="452">
+	<tr>
+		<td height="50" width="938" colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="40" width="938" colspan="3">
+		<p align="center"><b><font size="6">ONLINE MAILING SYSTEM</font></b></td>
+	</tr>
+	<tr>
+		<td height="279" width="344">
+		<img border="0" src="mail.png" width="300" height="300"></td>
+		<td height="279" width="275" bgcolor="#00FFFF">
+		<form method="POST" action="valid">
+			<p>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="email" size="20"><br>
+			Password <input type="password" name="pass" size="20"> </p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="Login" name="B1"> <a href="newuser.html" style="text-decoration:none">NewUser</a></p>
+		</form>
+		<p>&nbsp;</td>
+		<td height="279" width="313">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="68" width="938" colspan="3">&nbsp;</td>
+	</tr>
+</table>
+ 
+
+</html>

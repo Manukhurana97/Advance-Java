@@ -1,0 +1,21 @@
+<web-app>
+	<servlet>
+		<servlet-name>va</servlet-name>
+		<servlet-class>pack.Validation</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>va</servlet-name>
+		<url-pattern>/valid</url-pattern>
+		
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>nu</servlet-name>
+		<servlet-class>pack.NewUser</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>nu</servlet-name>
+		<url-pattern>/nuser</url-pattern>
+	</servlet-mapping>
+</web-app>
